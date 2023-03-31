@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Animal Search Form</h1>
+
+<!-- /dinosaurs?dinoFilter=whatever the user typed -->
+
+<form method="GET" action="/animals">
+<label for="animalSearch">Search:</label>
+
+
+    
+<input type="text" placeholder="search animal name..." name="animalFilter">
+<button type="submit">Search</button>
+</form>
+
+
+<ul>
+    <% animals.forEach((animal, i) => { %>
+        <li>
+            <%= animal.name %> is a  <%= animal.type %><a href="/animals/<%= i %>"> more info</a> 
+        </li>
+    <%})%>
+</ul>
+<%- include('../partials/footer.ejs') %>

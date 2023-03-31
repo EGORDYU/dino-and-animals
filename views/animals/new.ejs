@@ -1,0 +1,26 @@
+<%- include("../partials/header.ejs") %>
+<h1>Create a new Animal!</h1>
+
+<!-- this form will create an object in the request body (req.body)
+{
+    //the keys correspond to the 'name' properties of the inputs
+    type: what the user typed in
+    name: what the user typed in,
+    
+}
+-->
+<form method="POST" action="/animals">
+    <label for="animalType">Type:</label>
+    <input id="animalType" type="text" name="type" placeholder="animal type"/>
+
+    <label for="animalImage">Image url:</label>
+    <input id="animalImage" type="text" name="img_url" placeholder="animal image url"/>
+
+
+    <button type="submit">Create animal</button>
+
+
+</form>
+
+
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,13 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Details about Animal <%= id %>:</h1>
+
+<h2>Name: </h2>
+
+<p><%= animal.type %></p>
+
+<h2>Type:</h2>
+
+<img src=<%= animal.img_url %> style="width: 400px; height: 200px;">
+
+<%- include('../partials/footer.ejs') %>
